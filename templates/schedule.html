@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>Train Scheduler in prolog</h1>
+    <p>a sample train scheduler written in prolog.</p>
+  </div>
+</div>
+
+<div class="container text-left">
+  <div class="row">
+    <div class="col-md-6">
+      {% for train in trains %}
+      <h2>Train {{ train[0][0] }}</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Node</th>
+            <th>Arrival</th>
+            <th>Delay</th>
+            <th>Departure</th>
+          <tr>
+        </thead>
+        <tbody>
+          {% for node in train %}
+          <tr>
+            <td>{{ node[1] }}</td>
+            <td>{{ node[2] }}</td>
+            <td>{{ node[3] }}</td>
+            <td>{{ node[4] }}</td>
+          </tr>
+          {% end %}
+        </tbody>
+      </table>
+      <br/>
+      {% end %}
+    </div>
+  </div>
+</div>
+{% end %}

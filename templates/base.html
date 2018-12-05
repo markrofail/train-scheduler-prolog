@@ -20,51 +20,56 @@
 
     {% block head %}{% end %}
 
+    <style type="text/css">
+      .jumbotron {
+          background: #0c0fc9;
+          color: white;
+          padding-bottom: 80px
+      }
+      .jumbotron {
+          background: #270858;
+          border-color: #845ac7
+      }
+      .jumbotron{
+          background: #1620ace5
+      }
+      .jumbotron p {
+          color: #d9ccee;
+          max-width: 75%;
+          margin: 1em auto 2em
+      }
+      .navbar+.jumbotron {
+          margin-top: -20px
+      }
+      .jumbotron .lang-logo {
+          display: block;
+          background: #b01302;
+          border-radius: 50%;
+          overflow: hidden;
+          width: 100px;
+          height: 100px;
+          margin: auto;
+          border: 2px solid white
+      }
+      .jumbotron .lang-logo img {
+          max-width: 100%
+      }
+  
+  
+    </style>
   </head>
 
   <body>
-
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
-          <div class="inner cover">
-
-
-    {% block body %}{% end %}
-
-
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
-        </div>
-
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+          </li>
+        </ul>
       </div>
-
-    </div>
-
-
-
+    </nav>
+        {% block body %}{% end %}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
